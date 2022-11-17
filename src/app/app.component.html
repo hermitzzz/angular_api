@@ -1,0 +1,54 @@
+
+<style>
+  .table {
+    background-color: rgba(0, 26, 255, 0.11);
+    font-family: "Times New Roman", Times, serif;
+  }
+  .convertTab {
+    text-align: center;
+  }
+</style>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th *ngFor="let post of posts" >{{post.ccy}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Перевод в</th>
+      <td *ngFor="let post of posts"> {{post.base_ccy}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Купля</th>
+      <td *ngFor="let post of posts"> {{post.buy}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Продажа</th>
+      <td *ngFor="let post of posts"> {{post.sale}} </td>
+    </tr>
+  </tbody>
+</table>
+<div class="convertTab">
+<h5>Введите число:<input type = "number"  min="0" placeholder="Please enter your number" class = "ngFirstInput()">
+  <select>
+    <option value="USD">USD</option>
+    <option value ="EUR">EUR</option>
+    <option value="BTC">BTC</option>
+  </select></h5>
+  <br>
+<button type="button"  >Convert</button>
+<br>
+<br>
+  <h5>Ваш ответ:<input type = "number" placeholder="Please enter your number" class = "ngSecondInput()">
+    <select>
+      <option value="USD">USD</option>
+      <option value ="UAH">UAH</option>
+      <option value="BTC">BTC</option>
+
+    </select></h5>
+
+</div>
